@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./backend
+    container_name: medimemory_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - sqlite_data:/app/data
+    environment:
+      - DATABASE_URL=sqlite:///./data/medimemory.db
+    restart: always
+
+volumes:
+  sqlite_data:

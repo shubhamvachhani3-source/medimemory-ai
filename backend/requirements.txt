@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic[email]
+alembic
+pymupdf
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart
+bcrypt==3.2.2
